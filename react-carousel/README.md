@@ -62,21 +62,6 @@ npm i @brainhubeu/react-carousel
 npm i @types/brainhubeu__react-carousel -D
 ```
 
-### CDN
-If you don't use any bundler like Webpack, you can add these scripts to your HTML file, `body` section:
-```html
-<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script crossorigin type="text/javascript" src="https://unpkg.com/@brainhubeu/react-carousel@1.10.62-cdn/lib/react-carousel.js"></script>
-```
-Make sure to use a version ending with `-cdn`.
-
-Then, you can use the following global variables:
-- `BrainhubeuReactCarousel`
-- `BrainhubeuReactCarouselDots`
-- `BrainhubeuReactCarouselItem`
-- `BrainhubeuReactCarouselWrapper`
-
 ### SSR
 When using `@brainhubeu/react-carousel` with SSR (Server-side Rendering), we recommend [Next.js](https://github.com/zeit/next.js) as `@brainhubeu/react-carousel` currently doesn't work on the server side so it must be rendered on the client side (maybe we'll provide server-side working in the future).
 ```js
@@ -167,9 +152,9 @@ You can access a clickable demo with many examples and a [live code editor](http
 | [**breakpoints**](https://brainhubeu.github.io/react-carousel/docs/examples/responsive) | *Object* | `undefined` | All props can be set to different values on different screen resolutions |
 
 ### Plugins
-You can extend react-carousel default behavior by applying plugins shipped within carousel or by creating and applying your own ones
+You can extend react-carousel default behavior by applying plugins shipped within carousel
 
-[**Plugins documentation**](https://brainhubeu.github.io/react-carousel/docs/api/plugins)
+[**Plugins documentation**](https://brainhubeu.github.io/react-carousel/docs/plugins/plugins)
 
 ### Dots props
 
