@@ -48,6 +48,7 @@ const Carousel = (props) => {
   const isInitialMount = useRef(true);
   const carouselRef = useRef(null);
   const trackContainerRef = useRef(null);
+  const unmounted = useRef(false);
 
   const {
     carouselPlugins,
@@ -67,7 +68,13 @@ const Carousel = (props) => {
   );
 
   useEffect(() => {
-    setStrategies(strategies);
+    if (!unmounted.current) {
+      setStrategies(strategies);
+    }
+
+    return () => {
+      unmounted.current = true;
+    };
   }, [strategies]);
 
   /**
